@@ -11,12 +11,137 @@
 <body>
 
 	<figure id="figure2"> 
-		<a href="#"><img src="img/Banners-03.png" id="categorias"></a>
-		<a href="#"><img src="img/Banners-05.png" id="categorias"></a>
-		<a href="#"><img src="img/Banners-07.png" id="categorias"></a>
-		<a href="#"><img src="img/Banners-09.png" id="categorias"></a>
-		<a href="#"><img src="img/Banners-03.png" id="categorias"></a>
+		<a href="#"><img src="img/Banners-03.png" id="categoria1"></a>
+		<a href="#"><img src="img/Banners-05.png" id="categoria2"></a>
+		<a href="#"><img src="img/Banners-07.png" id="categoria3"></a>
+		<a href="#"><img src="img/Banners-09.png" id="categoria4"></a>
+		<a href="#"><img src="img/Banners-10.png" id="categoria5"></a>
 	</figure>
+
+
+
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+
+<script type="text/javascript">
+       $(document).ready(function () {
+
+           $('#categoria1').on('click',function () {
+               var cad = "<img height= 137 width=200 src=img/Banners-03.png><br />Los productos son:<br />";
+                var URL = "http://localhost:8000/api-prueba-bambu/proyectos/?categoria=consumibles&format=json";
+                
+
+               
+               var cadena = $.getJSON(URL, function (data) {
+
+                    console.log(data.length);
+                    for (var i = data.length - 1; i >= 0; i--) {
+                        cad += ("<br />" + data[i].nombre + "<br /> " +
+                            "<img height= 137 width=200 src=http://avarajame.com/media-bambu/"+data[i].img_principal+"><br /> " +
+                           data[i].codigo );
+                    };
+                   
+                   $("#figure2").html(cad);
+               })     
+           })
+       });
+    </script>
+
+
+    <script type="text/javascript">
+       $(document).ready(function () {
+
+           $('#categoria2').on('click',function () {
+               var cad = "<img height= 137 width=200 src=img/Banners-05.png><br />Los productos son:<br />";
+                var URL = "http://localhost:8000/api-prueba-bambu/proyectos/?categoria=hogar&format=json";
+                
+
+               
+               var cadena = $.getJSON(URL, function (data) {
+
+                    console.log(data.length);
+                    for (var i = data.length - 1; i >= 0; i--) {
+                        cad += ("<br />" + data[i].nombre + "<br /> " +
+                            "<img height= 137 width=200 src=http://avarajame.com/media-bambu/"+data[i].img_principal+"><br /> " +
+                           data[i].codigo );
+                    };
+                   
+                   $("#figure2").html(cad);
+               })     
+           })
+       });
+    </script>
+
+    <script type="text/javascript">
+       $(document).ready(function () {
+
+           $('#categoria3').on('click',function () {
+               var cad = "<img height= 137 width=200 src=img/Banners-07.png><br />Los productos son:<br />";
+                var URL = "http://localhost:8000/api-prueba-bambu/proyectos/?categoria=accesorios&format=json";
+                
+
+               
+               var cadena = $.getJSON(URL, function (data) {
+
+                    console.log(data.length);
+                    for (var i = data.length - 1; i >= 0; i--) {
+                        cad += ("<br />" + data[i].nombre + "<br /> " +
+                            "<img height= 137 width=200 src=http://avarajame.com/media-bambu/"+data[i].img_principal+"><br /> " +
+                           data[i].codigo );
+                    };
+                   
+                   $("#figure2").html(cad);
+               })     
+           })
+       });
+    </script>
+
+    <script type="text/javascript">
+       $(document).ready(function () {
+
+           $('#categoria4').on('click',function () {
+               var cad = "<img height= 137 width=200 src=img/Banners-09.png><br />Los productos son:<br />";
+                var URL = "http://localhost:8000/api-prueba-bambu/proyectos/?categoria=oficina&format=json";
+                
+
+               
+               var cadena = $.getJSON(URL, function (data) {
+
+                    console.log(data.length);
+                    for (var i = data.length - 1; i >= 0; i--) {
+                        cad += ("<br />" + data[i].nombre + "<br /> " +
+                            "<img height= 137 width=200 src=http://avarajame.com/media-bambu/"+data[i].img_principal+"><br /> " +
+                           data[i].codigo );
+                    };
+                   
+                   $("#figure2").html(cad);
+               })     
+           })
+       });
+    </script>
+
+    <script type="text/javascript">
+       $(document).ready(function () {
+
+           $('#categoria5').on('click',function () {
+               var cad = "<img height= 137 width=200 src=img/Banners-10.png><br />Los productos son:<br />";
+                var URL = "http://localhost:8000/api-prueba-bambu/proyectos/?categoria=tecnologia&format=json";
+                
+
+               
+               var cadena = $.getJSON(URL, function (data) {
+
+                    console.log(data.length);
+                    for (var i = data.length - 1; i >= 0; i--) {
+                        cad += ("<br />" + data[i].nombre + "<br /> " +
+                            "<img height= 137 width=200 src=http://avarajame.com/media-bambu/"+data[i].img_principal+"><br /> " +
+                           data[i].codigo );
+                    };
+                   
+                   $("#figure2").html(cad);
+               })     
+           })
+       });
+    </script>
 
 </body>
 
