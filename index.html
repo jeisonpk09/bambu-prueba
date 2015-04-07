@@ -1,7 +1,7 @@
 <html>
-<LINK href='css/estilos.css' type=text/css rel=stylesheet> 
 <meta charset="utf-8">
 <head>
+	<LINK href='css/estilos.css' type=text/css rel=stylesheet> 
 	<title>Bambu</title>
 </head>
 <header>
@@ -9,9 +9,35 @@
 </header>
 <body>
 
-<figure>
-<img src="img/slider.png" id="imagen">
-</figure>
+<div class="slider">
+
+	<input type="radio" name="slide_switch" id="id1"/>
+	<label for="id1">
+		<img src="img/inicio-1.png" width="50"/>
+	</label>
+	<img src="img/inicio-1.png"/>
+	
+	<!--Lets show the second image by default on page load-->
+
+
+	<input type="radio" name="slide_switch" id="id2" checked="checked"/>
+	<label for="id2">
+		<img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" width="50"/>
+	</label>
+	<img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg"/>
+	<!--Lets show the second image by default on page load-->
+
+
+
+	<input type="radio" name="slide_switch" id="id3"/>
+	<label for="id3">
+		<img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" width="50"/>
+	</label>
+	<img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"/>
+	
+	
+</div>
+
 
 <br><br>
 
@@ -21,14 +47,13 @@
 	<a href="">Favoritos</a><br><br>
 </p>
 
-  
-
 </body>
 
 <nav>
 <ul>
-	<li><a href="index.html" ><img src="img/inicio.png" ><br><a/></li>
+    <li><a href="index.html" ><img src="img/inicio.png" ><br><a/></li>
     <li><a href="Categorias.html" ><img src="img/categorias.png" ><br><a/></li>
+    <li><a href="lista.html" ><img src="img/lista.png" ><br><a/></li>
     <li><a href="#" ><img src="img/cotizacion.png" ><br><a/></li>
     <li><a href= http://www.mapale.com.co/ ><img src="img/mapale.png" ><br><a/></li>
 </ul>
